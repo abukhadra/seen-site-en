@@ -1,6 +1,13 @@
 #repository: tomjoht/documentation-theme-jekyll
 repository: abukhadra/seen
 
+domain: seenlang.org
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://seenlang.org # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ""#jekyllrb
+github_username:  ""#jekyll
+
+
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
