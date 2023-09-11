@@ -1,3 +1,9 @@
-
+Cargo.lock
+.DS_Store
+.DS_Store?
+/target
 .vscode/settings.json
-/docs_old
+/.vscode/
+/.git/
+/build
+/بنية
