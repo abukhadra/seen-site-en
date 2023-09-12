@@ -1,18 +1,81 @@
-<!-- <html lang="en">
-<head> -->
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
-<link 
- rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css"> -->
-
-    
-<div id="wrapper" class="CodeMirror">
-    <div id="container">
-        <textarea id="code" name="code">() -> println("hello world")</textarea>
-    </div>
+ <div id="code-container">
+    <textarea id="code" name="code" class="CodeMirror">
+@desktop
+() -> {
+    {
+        view : {
+            title: "hello world",
+            content: "hello world"
+        }
+    }
+}</textarea>
 </div>
+<div id="code-container">
+    <textarea id="code_ar" name="code_ar" class="CodeMirror">
+⎔مكتبي
+() -> {
+    {
+        عرض : {
+            عنوان: «السلام عليكم»،
+            محتوى: «السلام عليكم!!»
+        }
+    }
+}</textarea>
+</div>    
 
+<script>
 
-                                                                                                     
-                                                                                                     
+    //================
+    //   English Editor
+    //================
+    const editor_en = CodeMirror.fromTextArea(document.querySelector('#code'), {
+      readOnly: true,
+      viewportMargin: Infinity,
+      lineNumbers: true,
+      lineWrapping: true,
+      direction: "ltr",
+      scrollbarStyle: "simple",
+      indentUnit: 4, 
+      tabSize: 4,
+      styleActiveLine: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      lineNumberFormatter: lineNumberFormatter("ltr"),
+      foldGutter: true,
+      gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]      
+      
+    });
+    
+    //================
+    //   Arabic Editor
+    //================
+    const editor_ar = CodeMirror.fromTextArea(document.querySelector('#code_ar'), {
+      readOnly: true,
+      viewportMargin: Infinity,
+      lineNumbers: true,
+      lineWrapping: true,
+      direction: "rtl",
+      scrollbarStyle: "simple",
+      indentUnit: 4, 
+      tabSize: 4,
+      styleActiveLine: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      lineNumberFormatter: lineNumberFormatter("rtl"),
+      foldGutter: true,
+      gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]      
+      
+    });
+    
+    //================
+    //   lineNumberFormatter()
+    //================
+    function lineNumberFormatter(dir) {
+      if(dir === "rtl") {
+        return (n) => toEasternDigits(n)
+      } else {
+        return (n) => n
+      }      
+    }
+    </script>
