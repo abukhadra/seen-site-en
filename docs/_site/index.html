@@ -907,7 +907,7 @@ permalink: mydoc_alerts
     type: "pages"
   values:
     layout: "page"
-    comments: true
+    comments: false
     search: true
     sidebar: mydoc_sidebar
     topnav: topnav
@@ -1072,7 +1072,7 @@ permalink: mydoc_alerts
 
 <h2 id="comments">Comments</h2>
 
-<p>The theme integrates <a href="https://commento.io/">Commento.io</a> for comments below pages and posts. (This commenting service doesn’t inject controversial tracking ads like Disqus does.) You will need to Commento.io account + plan ($5/month) to authorize Commento with your domain (no other configuration should be required). If you don’t want comments, in the _config.yml file, change the <code class="language-plaintext highlighter-rouge">comments: true</code> properties (under <code class="language-plaintext highlighter-rouge">defaults</code>) to <code class="language-plaintext highlighter-rouge">comments: false</code> in every instance. Then in the commento.html include file (inside _includes), the <code class="language-plaintext highlighter-rouge">{% unless page.comments == false %} ... {% endunless %}</code> logic will not insert the Commentio form.</p>
+<p>The theme integrates <a href="https://commento.io/">Commento.io</a> for comments below pages and posts. (This commenting service doesn’t inject controversial tracking ads like Disqus does.) You will need to Commento.io account + plan ($5/month) to authorize Commento with your domain (no other configuration should be required). If you don’t want comments, in the _config.yml file, change the <code class="language-plaintext highlighter-rouge">comments: false</code> properties (under <code class="language-plaintext highlighter-rouge">defaults</code>) to <code class="language-plaintext highlighter-rouge">comments: false</code> in every instance. Then in the commento.html include file (inside _includes), the <code class="language-plaintext highlighter-rouge">{% unless page.comments == false %} ... {% endunless %}</code> logic will not insert the Commentio form.</p>
 
 <h2 id="relative-links-and-offline-viewing">Relative links and offline viewing</h2>
 
