@@ -30,6 +30,7 @@
     //   English Editor
     //================
     const editor_en = CodeMirror.fromTextArea(document.querySelector('#code'), {
+      mode: "seen-en",
       readOnly: true,
       viewportMargin: Infinity,
       lineNumbers: true,
@@ -51,6 +52,7 @@
     //   Arabic Editor
     //================
     const editor_ar = CodeMirror.fromTextArea(document.querySelector('#code_ar'), {
+      mode: "seen-ar",
       readOnly: true,
       viewportMargin: Infinity,
       lineNumbers: true,
